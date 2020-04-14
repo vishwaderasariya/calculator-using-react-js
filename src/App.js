@@ -22,7 +22,7 @@ class App extends Component {
             this.reset()
         }
         else if(button === "CE"){
-            this.backspace()
+            this.escape()
         }
 
         else {
@@ -62,9 +62,11 @@ class App extends Component {
   render()
   {
     return(
+      <div>
       <div className='calculator'>
         <Result result={this.state.result}/>
         <Keypad onClick={this.onClick}/>
+      </div>
       </div>
     )
   }
